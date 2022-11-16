@@ -7,7 +7,7 @@ the search for the name and optionally the country
 
 ### Technologies used to implement the project:
 
-- HTMl5
+- HTML5
 - CSS3
 - JavaScript
 - SASS

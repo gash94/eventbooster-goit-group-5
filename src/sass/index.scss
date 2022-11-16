@@ -1,1 +1,8 @@
-@import './common';
+@import './base/common';
+@import './base/container';
+
+@import './utils/variables';
+
+@import './components/header';
+@import './components/main';
+@import './components/footer';

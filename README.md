@@ -27,14 +27,14 @@ Project implemented:
 
 ## Development team:
 
-[Paweł "Gash" gasz](https://github.com/gash94) (Team Leader)
+[Paweł "Gash" Gasz](https://github.com/gash94) (Team Leader)
 
 [Agnieszka Janowska](https://github.com/Agnieszkaa86) (Scrum Master)
 
-[Magda Święcka](https://github.com/#) (Developer)
+[Magda Święcka](https://github.com/magdaswiecka) (Developer)
 
-[Patrycja Lamik](https://github.com/#) (Developer)
+[Patrycja Lamik](https://github.com/Patrycja1994) (Developer)
 
-[Bartek Jedliczka](https://github.com/#) (Developer)
+[Bartek Jedliczka](https://github.com/BartekJedliczka) (Developer)
 
 [Miłosz Pleśniak](https://github.com/MiloszPlesniak) (Developer)

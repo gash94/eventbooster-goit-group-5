@@ -1,9 +1,12 @@
-# Team Project "EventBooster" 
+# Team Project "EventBooster"
 
- Team website design "EventBooster" which presents the nearest 
-events based on the search for the name and optionally the country
+Team website design "EventBooster" which presents the nearest events based on
+the search for the name and optionally the country
+
+[LIVE DEMO](https://gash94.github.io/eventbooster-goit-group-5)
 
 ### Technologies used to implement the project:
+
 - HTMl5
 - CSS3
 - JavaScript
@@ -13,6 +16,7 @@ events based on the search for the name and optionally the country
 - git
 
 Project implemented:
+
 - xxx
 
 - additionally:

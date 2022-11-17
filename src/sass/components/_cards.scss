@@ -1,0 +1,66 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 -2px;
+
+  &__item {
+    position: relative;
+    width: 138px;
+    max-height: 242px;
+    text-align: center;
+    margin: 0 2px 30px 2px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: '';
+      width: 108px;
+      height: 101px;
+      border: 1px solid rgba(220, 86, 197, 0.3);
+      border-radius: 50px 0px;
+    }
+  }
+  &__image {
+    display: block;
+    width: 128px;
+    height: 161px;
+    border-radius: 50px 0px;
+    object-fit: cover;
+    margin-top: 10px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #dc56c5;
+    margin: 2px 0;
+  }
+  &__date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    margin: 2px 0;
+  }
+  &__place {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff;
+    margin: 2px 0;
+  }
+  &__pin {
+    position: relative;
+    &::before {
+      position: absolute;
+      bottom: 3px;
+      left: -7px;
+      content: '';
+      width: 6px;
+      height: 9px;
+      background-image: url('../images/pin.svg');
+    }
+  }
+}

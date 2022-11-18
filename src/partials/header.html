@@ -1,3 +1,35 @@
-<header>
-    <div class="container">Header</div>
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="#">
+                 <svg class="logo__icon">
+                    <use href="/src/images/sprite.svg#logo"></use>
+                 </svg>
+            </a>
+        </div>
+        <h1 class="header__title">FIND BEST EVENTS AROUND THE WORLD</h1>
+        <div class="header__field">
+            <input
+                type="text"
+                name="search-event"
+                placeholder="Start searching"
+                class="header__input search__input"
+            />
+                    <svg clas="input__icon" width="12px" height="12px">
+                        <use href="./images/sprite.svg#icon-search"></use>
+                    </svg>
+        </div>
+        <div class="header__field">
+             <input
+                type="text"
+                name="search-event"
+                placeholder="Choose country"
+                class="header__input choose-country__input"
+            />
+                    <svg clas="input__icon" width="15px" height="10px">
+                        <use href="./images/sprite.svg#icon-polygon"></use>
+                    </svg>
+        </div>
+        <div class="header__gradient"></div>
+    </div>
 </header>

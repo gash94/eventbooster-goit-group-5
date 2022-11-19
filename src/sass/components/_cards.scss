@@ -1,0 +1,135 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -2px;
+
+  &__item {
+    position: relative;
+    width: 138px;
+    max-height: 242px;
+    text-align: center;
+    margin: 0 2px 30px 2px;
+    transition: 0.2s ease-in-out;
+    transition-property: transform;
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: '';
+      width: 108px;
+      height: 101px;
+      border: 1px solid rgba(220, 86, 197, 0.3);
+      border-radius: 50px 0px;
+    }
+  }
+  &__image {
+    display: block;
+    width: 128px;
+    height: 161px;
+    border-radius: 50px 0px;
+    object-fit: cover;
+    margin-top: 10px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #dc56c5;
+    margin: 5px 0;
+  }
+  &__date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    margin: 2px 0;
+  }
+  &__place {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff;
+    margin: 2px 0;
+  }
+  &__pin {
+    position: relative;
+    &::before {
+      position: absolute;
+      bottom: 3px;
+      left: -9px;
+      content: '';
+      width: 6px;
+      height: 9px;
+      background-image: url('../images/pin.svg');
+    }
+  }
+}
+.notfound {
+  display: block;
+  padding-top: 50px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 17px;
+}
+//  tablet
+@media screen and (min-width: 768px) {
+  .cards {
+    margin: 0 -4px;
+    &__item {
+      width: 196px;
+      max-height: 312px;
+      margin: 0 2px 30px 2px;
+
+      &::before {
+        width: 153px;
+        height: 143px;
+      }
+    }
+    &__image {
+      width: 180px;
+      height: 227px;
+    }
+    &__title {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__date {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__place {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    &__pin {
+      position: relative;
+      &::before {
+        bottom: 4px;
+        left: -10px;
+        width: 7px;
+        height: 10px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+//  desktop
+@media screen and (min-width: 1024px) {
+  .cards {
+    margin: 0 -28px;
+    &__item {
+      margin: 0 27px 30px 27px;
+    }
+  }
+}

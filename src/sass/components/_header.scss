@@ -1,0 +1,112 @@
+.header {
+    position: relative;
+    z-index: 0;
+
+    background-color:  #000000;
+    background-image: linear-gradient( rgba(11, 11, 11, 0.5),
+                                       rgba(11, 11, 11, 0.5)),
+                    url('/src/images/header_bg_mobile.jpg');
+                    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+        &__content{
+            padding-top: 78px;
+            padding-bottom: 112px;
+        }
+        &__field {
+            text-align: center;
+            position: relative;
+            display: block;
+
+            &:first-child {
+                margin: 0 0 25px;
+            }
+        }
+
+        &__title {
+            display: block;
+            width: 212px;
+            color: rgba(220, 86, 197, 1);
+            margin-bottom: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        &__input {
+            padding: 10px 50px 10px 30px;
+            width: 270px;
+            height: 40px;
+            border: 0;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+            outline: none;
+        }
+        &__gradient{
+            position: absolute;
+            pointer-events: none;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(180deg, rgba(13, 13, 13, 0) 0%, 
+                                        rgba(14, 14, 14, 0.8) 100%);
+            width: 100%;
+            height: 102px; 
+        }
+}
+    @media screen and (min-width: 768px) { 
+        .header{
+            background-image:  linear-gradient( rgba(11, 11, 11, 0.5),
+                                            rgba(11, 11, 11, 0.5)),
+                            url("/src/images/header_bg_tablet.jpg");
+               
+            &__content {
+                padding-top: 40px;
+                padding-bottom: 183px;
+            }
+            &__field {
+                display: inline-block;
+
+                &:first-child {
+                    margin: 0 30px 0 0;
+                }
+            }
+            &__title{
+                 width: 353px;
+                margin-bottom: 27px;
+                font-size: 30px;
+                line-height: 37px;
+            }
+        }
+    } 
+
+    @media screen and (min-width: 1024px) {
+
+        .header{
+                background-image:  linear-gradient( rgba(11, 11, 11, 0.5),
+                                            rgba(11, 11, 11, 0.5)),
+                            url("/src/images/header_bg_desktop.jpg");
+        
+            &__content {
+                padding-bottom: 192px;
+            }
+            &__title{
+                width: 600px;
+                margin-bottom: 52px;
+                font-size: 50px;
+                line-height: 61px;
+            }
+        }
+    }
+    .input__icon {
+            position: absolute;
+            pointer-events: none;
+            top: 15px;
+            right: 30px;
+            fill: #939393;
+        }
+
+
+

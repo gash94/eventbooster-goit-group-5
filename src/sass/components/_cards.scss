@@ -12,12 +12,15 @@
     max-height: 242px;
     text-align: center;
     margin: 0 2px 30px 2px;
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
     transition-property: transform;
     &:hover,
     &:focus {
       transform: scale(1.1);
       cursor: pointer;
+      .cards__image {
+        box-shadow: 20px -16px 34px -15px rgba(220, 86, 197, 0.69);
+      }
     }
     &::before {
       position: absolute;
@@ -37,6 +40,8 @@
     border-radius: 50px 0px;
     object-fit: cover;
     margin-top: 10px;
+    transition: 0.3s ease-in-out;
+    transition-property: box-shadow;
   }
   &__title {
     font-weight: 700;
@@ -63,7 +68,7 @@
     position: relative;
     &::before {
       position: absolute;
-      bottom: 3px;
+      top: 3px;
       left: -9px;
       content: '';
       width: 6px;
@@ -114,7 +119,7 @@
     &__pin {
       position: relative;
       &::before {
-        bottom: 4px;
+        top: 4px;
         left: -10px;
         width: 7px;
         height: 10px;

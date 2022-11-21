@@ -51,6 +51,11 @@
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     outline: none;
+    position: relative;
+    
+    &--open {
+      border-radius: 20px 20px 0px 0px;
+    }
   }
   &__gradient {
     position: absolute;
@@ -67,6 +72,59 @@
     height: 102px;
   }
 }
+
+.country {
+  position: absolute;
+  color: white;
+  overflow: auto;
+  width: 100%;
+  min-height: 20px;
+  max-height: 210px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid #939393;
+  border-radius: 0px 0px 25px 25px;
+  margin-right: 10px;
+  z-index: 2;
+  
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    text-align: center;
+    font-size: 16px;
+    line-height: 19.5px;
+    color: #cccccc;
+    cursor: pointer;
+
+    &:last-child {
+      border-radius: 0px 0px 25px 25px;
+    }
+
+    &:hover {
+      background-color: #dc56c5;
+    }
+  }
+  &::-webkit-scrollbar {
+  width: 3px;
+}
+
+&::-webkit-scrollbar-thumb {
+  background-color: #939393;
+  outline: 1px solid slategrey;
+  border-radius: 10px;
+  width: 1px;
+}
+&::-webkit-scrollbar-track-piece:end {
+    margin-bottom: 20px; 
+}
+}
+
+
+
+
 @media screen and (min-width: 768px) {
   .header {
     background-image: linear-gradient(

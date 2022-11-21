@@ -1,6 +1,7 @@
 .header {
   position: relative;
   z-index: 0;
+
   background-image: linear-gradient(
       rgba(11, 11, 11, 0.5),
       rgba(11, 11, 11, 0.5)
@@ -15,63 +16,41 @@
     padding-top: 78px;
     padding-bottom: 112px;
   }
+  &__field-container {
+    text-align: center;
+  }
   &__field {
     text-align: center;
     position: relative;
-    z-index: 0;
+    display: flex;
+    justify-content: center;
 
     &:first-child {
-      margin: 0 0 25px;
+      margin-bottom: 25px;
     }
   }
-  position: relative;
-  z-index: 0;
 
-  background-color: #000000;
-  background-image: linear-gradient(
-      rgba(11, 11, 11, 0.5),
-      rgba(11, 11, 11, 0.5)
-    ),
-    url('/src/images/header_bg_mobile.jpg');
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  &__content {
-    padding-top: 78px;
-    padding-bottom: 112px;
-  }
-  &__field {
-    text-align: center;
-    position: relative;
+  &__title {
     display: block;
-
-    &:first-child {
-      margin: 0 0 25px;
-    }
+    width: 212px;
+    font-weight: 900;
+    font-size: 18px;
+    color: rgba(220, 86, 197, 1);
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
-
-            &:first-child {
-                margin: 0 0 25px;
-            }
-        }
 
   &__input {
     padding: 10px 50px 10px 30px;
     width: 270px;
     height: 40px;
     border: 0;
-
-    color: #939393;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     outline: none;
-    position: relative;
-    &--open {
-      border-radius: 20px 20px 0px 0px;
-    }
   }
   &__gradient {
     position: absolute;
@@ -81,81 +60,27 @@
     left: 0;
     background: linear-gradient(
       180deg,
-      rgba(13, 13, 13, 0) 0%,
-
+      rgba(13, 13, 13, 0.19) 0%,
       rgba(14, 14, 14, 0.8) 100%
     );
     width: 100%;
     height: 102px;
   }
-
-.country::-webkit-scrollbar {
-  width: 3px;
 }
-    @media screen and (min-width: 768px) { 
-        .header{
-            background-image:  linear-gradient( rgba(11, 11, 11, 0.5),
-                                            rgba(11, 11, 11, 0.5)),
-                            url("/src/images/header_bg_tablet.jpg");
-               
-            &__content {
-                padding-top: 40px;
-                padding-bottom: 183px;
-            }
-            &__field {
-                display: inline-block;
+@media screen and (min-width: 768px) {
+  .header {
+    background-image: linear-gradient(
+        rgba(11, 11, 11, 0.5),
+        rgba(11, 11, 11, 0.5)
+      ),
+      url('/src/images/header_bg_tablet.jpg');
 
-.country::-webkit-scrollbar-thumb {
-  background-color: #939393;
-  outline: 1px solid slategrey;
-  border-radius: 10px;
-  width: 1px;
-}
-.country::-webkit-scrollbar-track-piece:end {
-  background: transparent;
-  margin-bottom: 20px;
-}
-.country {
-  position: absolute;
-  color: white;
-  overflow: auto;
-  width: 100%;
-  min-height: 20px;
-  max-height: 210px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  border-top: 1px solid #939393;
-  border-radius: 0px 0px 25px 25px;
-  margin-right: 10px;
-  z-index: 2;
-
-    @media screen and (min-width: 1024px) {
-
-        .header{
-                background-image:  linear-gradient( rgba(11, 11, 11, 0.5),
-                                            rgba(11, 11, 11, 0.5)),
-                            url("/src/images/header_bg_desktop.jpg");
-        
-            &__content {
-                padding-bottom: 192px;
-            }
-            &__title{
-                width: 600px;
-                margin-bottom: 52px;
-                font-size: 50px;
-                line-height: 61px;
-            }
-        }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 183px;
     }
-    .input__icon {
-            position: absolute;
-            pointer-events: none;
-            top: 15px;
-            right: 30px;
-            fill: #939393;
-        }
-
-
+    &__field {
+      display: inline-block;
 
       &:first-child {
         margin: 0 30px 0 0;
@@ -438,240 +363,3 @@
     opacity: 1;
   }
 }
-
-.logo {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background-repeat: no-repeat;
-  background-image: url('/src/images/logo_bg_mobile.png');
-  width: 107px;
-  height: 90px;
-  padding-top: 25px;
-  padding-left: 25px;
-
-  &__icon {
-    position: absolute;
-    top: -30px;
-    left: -5px;
-    max-width: 100%;
-    height: auto;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 180px;
-    height: 150px;
-    padding-top: 40px;
-    padding-left: 40px;
-    background-image: url('/src/images/logo_bg_tablet.png');
-
-    &__icon {
-      height: auto;
-      top: 15px;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    padding-top: 40px;
-    padding-left: 40px;
-    width: 238px;
-    height: 200px;
-    background-image: url('/src/images/logo_bg_desktop.png');
-
-    &__icon {
-      position: absolute;
-      top: 0;
-      left: 0;
-      max-width: 100%;
-      height: 200px;
-    }
-  }
-}
-
-//blink text
-.sign {
-  display: block;
-  background-image: radial-gradient(
-    ellipse 50% 35% at 50% 50%,
-    #6b1839,
-    transparent
-  );
-
-  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-    -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-    0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-  animation: shine 3s forwards, flicker 5s infinite;
-}
-
-@keyframes blink {
-  0%,
-  22%,
-  36%,
-  75% {
-    color: #ffe6ff;
-    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-  }
-  28%,
-  33% {
-    color: #ff65bd;
-    text-shadow: none;
-  }
-  82%,
-  97% {
-    color: #ff2483;
-    text-shadow: none;
-  }
-}
-
-.flicker {
-  animation: shine 2s forwards, blink 3s 2s infinite;
-}
-
-.fast-flicker {
-  animation: shine 2s forwards, blink 10s 10s infinite;
-}
-.faster-flicker {
-  animation: shine 1s forwards, blink 2s 1s infinite;
-}
-
-@keyframes shine {
-  0% {
-    color: #6b1839;
-    text-shadow: none;
-  }
-  100% {
-    color: #ffe6ff;
-    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-  }
-}
-
-@keyframes flicker {
-  from {
-    opacity: 1;
-  }
-
-  4% {
-    opacity: 0.9;
-  }
-
-  6% {
-    opacity: 0.85;
-  }
-
-  8% {
-    opacity: 0.95;
-  }
-
-  10% {
-    opacity: 0.9;
-  }
-
-  11% {
-    opacity: 0.922;
-  }
-
-  12% {
-    opacity: 0.9;
-  }
-
-  14% {
-    opacity: 0.95;
-  }
-
-  16% {
-    opacity: 0.98;
-  }
-
-  17% {
-    opacity: 0.9;
-  }
-
-  19% {
-    opacity: 0.93;
-  }
-
-  20% {
-    opacity: 0.99;
-  }
-
-  24% {
-    opacity: 1;
-  }
-
-  26% {
-    opacity: 0.94;
-  }
-
-  28% {
-    opacity: 0.98;
-  }
-
-  37% {
-    opacity: 0.93;
-  }
-
-  38% {
-    opacity: 0.5;
-  }
-
-  39% {
-    opacity: 0.96;
-  }
-
-  42% {
-    opacity: 1;
-  }
-
-  44% {
-    opacity: 0.97;
-  }
-
-  46% {
-    opacity: 0.94;
-  }
-
-  56% {
-    opacity: 0.9;
-  }
-
-  58% {
-    opacity: 0.9;
-  }
-
-  60% {
-    opacity: 0.99;
-  }
-
-  68% {
-    opacity: 1;
-  }
-
-  70% {
-    opacity: 0.9;
-  }
-
-  72% {
-    opacity: 0.95;
-  }
-
-  93% {
-    opacity: 0.93;
-  }
-
-  95% {
-    opacity: 0.95;
-  }
-
-  97% {
-    opacity: 0.93;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-    }

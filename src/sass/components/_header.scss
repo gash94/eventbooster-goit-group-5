@@ -189,7 +189,8 @@
   position: absolute;
   color: white;
   overflow: auto;
-  width: 100%;
+  width: 270px;
+  top: 40px;
   min-height: 20px;
   max-height: 194px;
   background: rgba(255, 255, 255, 0.2);
@@ -218,12 +219,14 @@
     }
   }
   &::-webkit-scrollbar {
-    width: 3px;
+    width: 11px;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: #939393;
-    border-radius: 10px;
     height: 43px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 10px;
+    background-color: #939393;
   }
   &::-webkit-scrollbar-track-piece:start {
     margin-top: 2px;

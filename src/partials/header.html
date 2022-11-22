@@ -15,20 +15,114 @@
         </h1>
 
         <div class="header__field-container">
-            <div class="header__field">
-                <input type="text" name="search-event" placeholder="Start searching"
-                    class="header__input search__input" />
-                <svg class="input__icon" width="12px" height="12px">
-                    <use href="./images/sprite.svg#icon-search"></use>
-                </svg>
-            </div>
-            <div class="header__field">
-                <input type="text" name="search-event" placeholder="Choose country"
-                    class="header__input choose-country__input" />
-                <svg class="input__icon" width="15px" height="10px">
-                    <use href="./images/sprite.svg#icon-polygon"></use>
-                </svg>
-            </div>
+            <form>
+        <div class="header__field">
+          <input
+            type="text"
+            name="search-event"
+            placeholder="Start searching"
+            autocomplete="off"
+            class="header__input search__input"
+          />
+          <button type="submit">
+            <svg class="input__icon" width="12px" height="12px">
+              <use href="./images/sprite.svg#icon-search"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="header__field">
+          <div>
+            <input
+              id="chose-country"
+              type="text"
+              name="search-event"
+              placeholder="Choose country"
+              class="header__input"
+              autocomplete="off"
+            />
+            <svg class="input__icon" width="15px" height="10px">
+              <use href="./images/sprite.svg#icon-polygon"></use>
+            </svg>
+          </div>
+          <div class="country hide">
+            <ul class="country__list">
+              <li class="country__item">United States Of America</li>
+              <li class="country__item">Andorra</li>
+              <li class="country__item">Anguilla</li>
+              <li class="country__item">Argentina</li>
+              <li class="country__item">Australia</li>
+              <li class="country__item">Austria</li>
+              <li class="country__item">Azerbaijan</li>
+              <li class="country__item">Bahamas</li>
+              <li class="country__item">Bahrain</li>
+              <li class="country__item">Barbados</li>
+              <li class="country__item">Belgium</li>
+              <li class="country__item">Bermuda</li>
+              <li class="country__item">Brazil</li>
+              <li class="country__item">Bulgaria</li>
+              <li class="country__item">Canada</li>
+              <li class="country__item">Chile</li>
+              <li class="country__item">China</li>
+              <li class="country__item">Colombia</li>
+              <li class="country__item">Costa Rica</li>
+              <li class="country__item">Croatia</li>
+              <li class="country__item">Cyprus</li>
+              <li class="country__item">Czech Republic</li>
+              <li class="country__item">Denmark</li>
+              <li class="country__item">Dominican Republic</li>
+              <li class="country__item">Ecuador</li>
+              <li class="country__item">Estonia</li>
+              <li class="country__item">Faroe Islands</li>
+              <li class="country__item">Finland</li>
+              <li class="country__item">France</li>
+              <li class="country__item">Georgia</li>
+              <li class="country__item">Germany</li>
+              <li class="country__item">Ghana</li>
+              <li class="country__item">Gibraltar</li>
+              <li class="country__item">Great Britain</li>
+              <li class="country__item">Latvia</li>
+              <li class="country__item">Lebanon</li>
+              <li class="country__item">Lithuania</li>
+              <li class="country__item">Luxembourg</li>
+              <li class="country__item">Malaysia</li>
+              <li class="country__item">Malta</li>
+              <li class="country__item">Mexico</li>
+              <li class="country__item">Monaco</li>
+              <li class="country__item">Montenegro</li>
+              <li class="country__item">Morocco</li>
+              <li class="country__item">Netherlands</li>
+              <li class="country__item">Netherlands Antilles</li>
+              <li class="country__item">New Zealand</li>
+              <li class="country__item">Northern Ireland</li>
+              <li class="country__item">Norway</li>
+              <li class="country__item">Peru</li>
+              <li class="country__item">Poland</li>
+              <li class="country__item">Portugal</li>
+              <li class="country__item">Romania</li>
+              <li class="country__item">Russian Federation</li>
+              <li class="country__item">Saint Lucia</li>
+              <li class="country__item">Saudi Arabia</li>
+              <li class="country__item">Serbia</li>
+              <li class="country__item">Singapore</li>
+              <li class="country__item">Slovakia</li>
+              <li class="country__item">Slovenia</li>
+              <li class="country__item">South Africa</li>
+              <li class="country__item">Spain</li>
+              <li class="country__item">Sweden</li>
+              <li class="country__item">Switzerland</li>
+              <li class="country__item">Taiwan</li>
+              <li class="country__item">Thailand</li>
+              <li class="country__item">Trinidad and Tobago</li>
+              <li class="country__item">Turkey</li>
+              <li class="country__item">Ukraine</li>
+              <li class="country__item">United Arab Emirates</li>
+              <li class="country__item">Uruguay</li>
+              <li class="country__item">Venezuela</li>
+            </ul>
+          </div>
+        </div>
+      </form>
         </div>
 
         <div class="header__gradient"></div>

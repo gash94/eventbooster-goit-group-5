@@ -1,4 +1,11 @@
-.hide{
+.hide {
   display: none;
   overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.rotate {
+  transition: 0.5s ease-in-out;
+  transition-property: transform;
+  transform: rotate(180deg);
 }

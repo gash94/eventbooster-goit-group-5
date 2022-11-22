@@ -1,29 +1,24 @@
 <header class="header">
-    <div class="header__content container">
-        <div class="logo">
-            <a href="#">
-                <svg class="logo__icon">
-                    <use href="/src/images/sprite.svg#logo"></use>
-                </svg>
-            </a>
-        </div>
-        <h1 class="header__title">
-            <div class="sign">
-                <span class="fast-flicker">FIND</span> BEST <span class="faster-flicker">EVENT</span> AROUND <span
-                    class="flicker">THE</span> WORLD
-            </div>
-        </h1>
+  <div class="header__content container">
+    <div class="logo">
+      <a href="#">
+        <svg class="logo__icon">
+          <use href="./images/sprite.svg#logo"></use>
+        </svg>
+      </a>
+    </div>
+    <h1 class="header__title">
+      <div class="sign">
+        <span class="fast-flicker">FIND</span> BEST <span class="faster-flicker">EVENT</span> AROUND <span
+          class="flicker">THE</span> WORLD
+      </div>
+    </h1>
 
-        <div class="header__field-container">
-            <form>
+    <div class="header__field-container">
+      <form>
         <div class="header__field">
-          <input
-            type="text"
-            name="search-event"
-            placeholder="Start searching"
-            autocomplete="off"
-            class="header__input search__input"
-          />
+          <input type="text" name="search-event" placeholder="Start searching" autocomplete="off"
+            class="header__input search__input" />
           <button type="submit">
             <svg class="input__icon" width="12px" height="12px">
               <use href="./images/sprite.svg#icon-search"></use>
@@ -33,20 +28,15 @@
 
         <div class="header__field">
           <div>
-            <input
-              id="chose-country"
-              type="text"
-              name="search-event"
-              placeholder="Choose country"
-              class="header__input"
-              autocomplete="off"
-            />
-            <svg class="input__icon" width="15px" height="10px">
+            <input id="chose-country" type="text" name="search-event" placeholder="Choose country" class="header__input"
+              autocomplete="off" />
+            <svg id="polygon" class="input__icon" width="15px" height="10px">
               <use href="./images/sprite.svg#icon-polygon"></use>
             </svg>
           </div>
           <div class="country hide">
             <ul class="country__list">
+              <li class="country__item">All countries</li>
               <li class="country__item">United States Of America</li>
               <li class="country__item">Andorra</li>
               <li class="country__item">Anguilla</li>
@@ -123,8 +113,8 @@
           </div>
         </div>
       </form>
-        </div>
-
-        <div class="header__gradient"></div>
     </div>
+
+    <div class="header__gradient"></div>
+  </div>
 </header>

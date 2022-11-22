@@ -1,48 +1,14 @@
-// .footer {
-//   background-color: #0e0e0e;
-//   padding-top: 27px;
-//   padding-bottom: 27px;
 
-//   &__paragraph {
-//     color: #939393;
-//     font-size: 14px;
-//     font-weight: 400;
-//     line-height: 17px;
-//     letter-spacing: 0em;
-//     text-align: center;
-//   }
-//   &__icon {
-//     color: red;
-//   }
-//   &__link {
-//     color: inherit;
-//   }
-// }
-// @media screen and (min-width: 768px) {
-//     .footer{
-//         padding-top: 18px;
-//         padding-bottom: 18px;
-
-//         &__wrapper {
-//             display: flex;
-//             justify-content: center;
-//         }
-//         &__paragraph {
-//             display: inline;
-//             font-size: 16px;
-//             line-height: 20px;
-//         }
-//     }
-// }
 .main-backdrop {
   position: fixed;
   left: 0;
-  top: 0;
+  top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   visibility: visible;
   opacity: 1;
@@ -57,7 +23,9 @@
   pointer-events: none;
 }
 .modal {
+  position: absolute;
   width: 100%;
+  top: 10%;
   min-height: 100px;
   max-height: 100vh;
   overflow: auto;
@@ -87,13 +55,20 @@
     padding: 0;
   }
   .modal {
+    position: absolute;
     width: 618px;
     height: auto;
+    top:20%;
+    left: 20%;
   }
 }
 @media screen and (min-width: 1024px) {
   .modal {
-    width: 882px;
+    width: 700px;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+
   }
 }
 .team {
@@ -140,6 +115,7 @@
 @media screen and (min-width: 768px) {
   .team {
     width: 550px;
+    position: absolute;
 
     &__title {
       font-size: 26px;

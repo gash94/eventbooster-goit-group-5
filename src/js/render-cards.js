@@ -1,15 +1,20 @@
 import fetchEvents from './fetch-data';
 import markupEvents from './markup-event';
+import { scrollLoad } from './scroll';
 
+const inputSelectCountry = document.querySelector('#chose-country');
+const inputSearch = document.querySelector('.search__input');
+const cards = document.querySelector('.cards');
+const form = document.querySelector('form');
 const notfound = document.querySelector('.notfound');
-let searchValue = 'rock';
+let searchValue = '';
 let country = 'pl';
-let page = '1';
+let numPage = 0;
 
 const renderCards = () => {
-  fetchEvents(searchValue, country, page)
+  fetchEvents(searchValue, country, numPage)
     .then(({ events, pageInfo }) => {
-      console.log(events);
+      // console.log(events);
       const eventDetails = events.map(item => ({
         name: item.name,
         urlImage: item.images[4].url,
@@ -20,14 +25,30 @@ const renderCards = () => {
         id: item.id,
         urlTicket: item.url,
       }));
+      notfound.innerText = '';
       markupEvents(eventDetails);
+      console.log(numPage);
+      if (numPage !== 0) {
+        scrollLoad(1);
+      }
     })
     .catch(err => {
       console.log(err);
       notfound.innerText =
         'Sorry, no matches were found. Try a new search or use our suggestions.';
-      return;
     });
 };
 renderCards();
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  cards.innerHTML = '';
+  searchValue = inputSearch.value.trim();
+  country = inputSelectCountry.dataset.country;
+  console.log('value:', searchValue);
+  console.log('country:', country);
+  renderCards();
+  inputSearch.value = '';
+});
+
 export default renderCards;

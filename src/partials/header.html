@@ -9,7 +9,7 @@
     </div>
     <h1 class="header__title">
       <div class="sign">
-        <span class="fast-flicker">FIND</span> BEST <span class="faster-flicker">EVENT</span> AROUND <span
+        <span class="fast-flicker">FIND</span> BEST <span class="faster-flicker">EVENTS</span> AROUND <span
           class="flicker">THE</span> WORLD
       </div>
     </h1>
@@ -19,8 +19,8 @@
         <div class="header__field">
           <input type="text" name="search-event" placeholder="Start searching" autocomplete="off"
             class="header__input search__input" />
-          <button type="submit">
-            <svg class="input__icon" width="12px" height="12px">
+          <button class="btn__submit" type="submit">
+            <svg class="btn__icon" width="12px" height="12px">
               <use href="./images/sprite.svg#icon-search"></use>
             </svg>
           </button>
@@ -36,8 +36,8 @@
           </div>
           <div class="country hide">
             <ul class="country__list">
-              <li value="" class="country__item">All countries</li>
-              <li class="country__item">United States Of America</li>
+              <li data-country="" class="country__item">All countries</li>
+              <li data-country="us" class="country__item">United States Of America</li>
               <li class="country__item">Andorra</li>
               <li class="country__item">Anguilla</li>
               <li class="country__item">Argentina</li>
@@ -87,7 +87,7 @@
               <li class="country__item">Northern Ireland</li>
               <li class="country__item">Norway</li>
               <li class="country__item">Peru</li>
-              <li value="pl" class="country__item">Poland</li>
+              <li data-country="pl" class="country__item">Poland</li>
               <li class="country__item">Portugal</li>
               <li class="country__item">Romania</li>
               <li class="country__item">Russian Federation</li>

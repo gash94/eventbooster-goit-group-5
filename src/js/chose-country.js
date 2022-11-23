@@ -1,26 +1,34 @@
 import renderCards from './render-cards';
 
 const inputSelectCountry = document.querySelector('#chose-country');
+const inputSearch = document.querySelector('.search__input');
 const countryBox = document.querySelector('.country');
 const countries = [...document.querySelectorAll('.country__item')];
 const countryList = document.querySelector('.country__list');
-const inputSearch = document.querySelector('.search__input');
 const polygonIcon = document.querySelector('#polygon');
 const form = document.querySelector('form');
 
-inputSelectCountry.addEventListener('click', () => {
+inputSelectCountry.addEventListener('click', e => {
   countryBox.classList.toggle('hide');
   polygonIcon.classList.toggle('rotate');
+  console.log(inputSelectCountry.value);
+  inputSelectCountry.value = '';
+  renderListCountry(e);
   inputSelectCountry.classList.toggle('header__input--open');
 });
 
 countryBox.addEventListener('click', e => {
-  console.log(e.target.textContent);
   inputSelectCountry.value = e.target.textContent;
+  inputSelectCountry.dataset.country = e.target.dataset.country;
   countryBox.classList.toggle('hide');
   inputSelectCountry.classList.toggle('header__input--open');
 });
+
 inputSelectCountry.addEventListener('input', e => {
+  renderListCountry(e);
+});
+
+const renderListCountry = e => {
   const currentWord = e.target.value.toUpperCase();
   let result = countries;
   result = result.filter(countries =>
@@ -28,12 +36,5 @@ inputSelectCountry.addEventListener('input', e => {
   );
   countryList.textContent = '';
   result.forEach(item => countryList.appendChild(item));
-});
-
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault()
-//     renderCards(inputSearch.value, inputSelectCountry.value)
-//     console.log(inputSearch.value, inputSelectCountry.value)
-
-// })
+};
 export default form;

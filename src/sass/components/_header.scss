@@ -129,9 +129,28 @@
     }
   }
 }
+.btn {
+  &__submit {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    cursor: pointer;
+  }
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    fill: #939393;
+    transition: 0.5s ease-in-out;
+    transition-property: transform;
+    &:hover {
+      transform: scale(2);
+    }
+  }
+}
+
 .input__icon {
   position: absolute;
-  pointer-events: none;
   top: 15px;
   right: 30px;
   fill: #939393;

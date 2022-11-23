@@ -132,21 +132,27 @@
 }
 .btn {
   &__submit {
-    position: absolute;
-    top: 15px;
-    right: 30px;
-    cursor: pointer;
-  }
-  &__icon {
+    width: 40px;
+    height: 40px;
+    // border: 1px solid #000;
+    background: none;
     position: absolute;
     top: 0;
-    right: 0;
-    fill: #939393;
+    right: 20px;
+    cursor: pointer;
     transition: 0.5s ease-in-out;
     transition-property: transform;
     &:hover {
       transform: scale(2);
     }
+  }
+  &__icon {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    fill: #939393;
   }
 }
 

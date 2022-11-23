@@ -9,7 +9,7 @@ const form = document.querySelector('form');
 const notfound = document.querySelector('.notfound');
 let searchValue = '';
 let country = 'pl';
-let numPage = '0';
+let numPage = 0;
 
 const renderCards = () => {
   fetchEvents(searchValue, country, numPage)
@@ -27,9 +27,10 @@ const renderCards = () => {
       }));
       notfound.innerText = '';
       markupEvents(eventDetails);
-      // if (numPage !== 1) {
-      //   scrollLoad(1);
-      // }
+      console.log(numPage);
+      if (numPage !== 0) {
+        scrollLoad(1);
+      }
     })
     .catch(err => {
       console.log(err);
@@ -44,7 +45,6 @@ form.addEventListener('submit', e => {
   cards.innerHTML = '';
   searchValue = inputSearch.value.trim();
   country = inputSelectCountry.dataset.country;
-
   console.log('value:', searchValue);
   console.log('country:', country);
   renderCards();

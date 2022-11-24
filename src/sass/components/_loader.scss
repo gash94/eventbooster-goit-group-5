@@ -1,0 +1,135 @@
+$accent-color: #fff;
+$white-color: #dc56c5;
+$text-color: #0e0e0e;
+$close-modal-color: #4c00fe;
+$text-color-opacity: rgba(185, 185, 185, 0.5);
+$card-line-decor: rgba(220, 86, 197, 0.3);
+$card-box-shadow-hover: rgb(220 86 197 / 50%);
+
+$Loader-size: 20rem;
+$Loader-offset: 2rem;
+$Loader-timing: ease-in-out;
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $text-color;
+
+  &__circle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: $Loader-size;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      animation-duration: 1.8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: $Loader-timing;
+      filter: drop-shadow(calc($Loader-offset / 2.25) rgba($white-color, 0.75));
+    }
+
+    &:before {
+      width: 100%;
+      padding-bottom: 100%;
+      box-shadow: inset 0 0 0 $Loader-offset $white-color;
+      animation-name: pulsA;
+    }
+
+    &:after {
+      width: calc(100% - #{$Loader-offset}* 2);
+      padding-bottom: calc(100% - #{$Loader-offset}* 2);
+      box-shadow: 0 0 0 0 $white-color;
+      animation-name: pulsB;
+    }
+  }
+
+  @keyframes pulsA {
+    0% {
+      box-shadow: inset 0 0 0 $Loader-offset $white-color;
+      opacity: 1;
+    }
+
+    50%,
+    100% {
+      box-shadow: inset 0 0 0 0 $white-color;
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulsB {
+    0%,
+    50% {
+      box-shadow: 0 0 0 0 $accent-color;
+      opacity: 0;
+    }
+
+    100% {
+      box-shadow: 0 0 0 $Loader-offset $white-color;
+      opacity: 1;
+    }
+  }
+}
+
+$color-html: hsl(300, 100%, 60%);
+
+@function strokeDashoffset($num) {
+  @return 440 - calc((440 * $num) / 100);
+}
+
+.progressbar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+}
+
+.progressbar__svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.progressbar__svg-circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 30;
+  stroke-dasharray: 1300;
+  stroke-dashoffset: 1300;
+  stroke: hsl(0, 0%, 100%);
+  stroke-linecap: round;
+  transform: translate(15px, 15px); // stroke-width / 2
+}
+
+.shadow {
+  &-html {
+    filter: drop-shadow(0 0 5px $color-html);
+  }
+}
+
+.circle {
+  &-html {
+    animation: anim_circle-html 1s ease-in-out infinite;
+  }
+}
+
+@keyframes anim_circle-html {
+  to {
+    stroke-dashoffset: strokeDashoffset(100);
+  }
+}

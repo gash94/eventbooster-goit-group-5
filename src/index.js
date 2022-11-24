@@ -4,4 +4,3 @@ import markupEvents from './js/markup-event';
 import form from './js/chose-country';
 import modalTeam from './js/modal-team';
 import pagination from './js/pagination';
-

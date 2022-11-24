@@ -10,10 +10,9 @@ const form = document.querySelector('form');
 const notfound = document.querySelector('.notfound');
 let searchValue = '';
 let country = 'pl';
-let numPage = 0;
 
-const renderCards = pageNumber => {
-  fetchEvents(searchValue, country, pageNumber || numPage)
+const renderCards = (pageNumber = 0) => {
+  fetchEvents(searchValue, country, pageNumber)
     .then(({ events, pageInfo }) => {
       const eventDetails = events.map(item => ({
         name: item.name,
@@ -27,8 +26,7 @@ const renderCards = pageNumber => {
       }));
       notfound.innerText = '';
       markupEvents(eventDetails);
-      console.log(numPage);
-      if (numPage !== 0) {
+      if (pageNumber !== 0) {
         scrollLoad(1);
       }
       renderPagination(pageInfo);

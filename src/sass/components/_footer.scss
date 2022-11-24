@@ -8,7 +8,16 @@
     color: #939393;
     font-size: 14px;
     line-height: 1.22;
-    }   
+    } 
+    &__link {
+        color: inherit;
+        &:hover,
+        &:focus {
+            color: rgba(220, 86, 197, 1);
+            font-weight: 700;
+            transition: all 250ms linear;
+        }
+    }  
 }
 
 .heart-icon {

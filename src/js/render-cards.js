@@ -1,6 +1,7 @@
 import fetchEvents from './fetch-data';
 import markupEvents from './markup-event';
-import { scrollLoad } from './scroll';
+import renderPagination from './pagination';
+import { onToTopBtn } from './scroll';
 
 const inputSelectCountry = document.querySelector('#chose-country');
 const inputSearch = document.querySelector('.search__input');
@@ -9,27 +10,25 @@ const form = document.querySelector('form');
 const notfound = document.querySelector('.notfound');
 let searchValue = '';
 let country = 'pl';
-let numPage = 0;
 
-const renderCards = () => {
-  fetchEvents(searchValue, country, numPage)
+const renderCards = (pageNumber = 0) => {
+  fetchEvents(searchValue, country, pageNumber)
     .then(({ events, pageInfo }) => {
-      // console.log(events);
       const eventDetails = events.map(item => ({
         name: item.name,
         urlImage: item.images[4].url,
         date: item.dates.start.localDate,
-        place: item._embedded.venues[0].name,
-        city: item._embedded.venues[0].city.name,
-        country: item._embedded.venues[0].country.name,
+        place: item._embedded ? item._embedded.venues[0].name : '', // property not availabe sometimes
+        city: item._embedded ? item._embedded.venues[0].city.name : '', // property not availabe sometimes
+        country: item._embedded ? item._embedded.venues[0].country.name : '', // property not availabe sometimes
         id: item.id,
         urlTicket: item.url,
       }));
       notfound.innerText = '';
       markupEvents(eventDetails);
-      console.log(numPage);
-      if (numPage !== 0) {
-        scrollLoad(1);
+      renderPagination(pageInfo);
+      if (pageNumber !== 0) {
+        onToTopBtn();
       }
     })
     .catch(err => {

@@ -1,4 +1,4 @@
-export { scrollLoad };
+export { scrollLoad, onToTopBtn };
 
 const toTopBtn = document.querySelector('.btn-to-top');
 

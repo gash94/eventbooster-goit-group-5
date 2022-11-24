@@ -1,7 +1,7 @@
 import fetchEvents from './fetch-data';
 import markupEvents from './markup-event';
 import renderPagination from './pagination';
-import { scrollLoad } from './scroll';
+import { onToTopBtn } from './scroll';
 
 const inputSelectCountry = document.querySelector('#chose-country');
 const inputSearch = document.querySelector('.search__input');
@@ -26,10 +26,10 @@ const renderCards = (pageNumber = 0) => {
       }));
       notfound.innerText = '';
       markupEvents(eventDetails);
-      if (pageNumber !== 0) {
-        scrollLoad(1);
-      }
       renderPagination(pageInfo);
+      if (pageNumber !== 0) {
+        onToTopBtn();
+      }
     })
     .catch(err => {
       console.log(err);

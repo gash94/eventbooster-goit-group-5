@@ -62,7 +62,7 @@
 
   &__img {
    border-radius: 15px;
-   box-shadow: 0 0 11px rgba(220, 86, 197, 1)
+   box-shadow: 0 0 11px rgba(220, 86, 197, 1);
   }
   &__name {
     font-weight: 500;
@@ -138,10 +138,9 @@
     flex-basis: calc((100% - 20px) / 3);
     &__img {
       width: 75px;
-      margin-right: 20px;
     }
     &__name {
-      font-size: 22px;
+      font-size: 20px;
     }
   }
 @media screen and (min-width: 1024px) {
@@ -163,10 +162,10 @@
     &__img {
       width: 85px;
       height: 85px;
-      margin-right: 30px;
+      
     }
     &__name {
-      font-size: 25px;
+      font-size: 22px;
     }
   }
   .students__wrapper {

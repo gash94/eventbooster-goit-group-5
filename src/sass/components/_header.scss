@@ -5,7 +5,7 @@
       rgba(11, 11, 11, 0.5),
       rgba(11, 11, 11, 0.5)
     ),
-    url('../images/header_bg_mobile.jpg');
+    url('../images/header/header_bg_mobile.jpg');
 
   background-position: center;
   background-repeat: no-repeat;
@@ -83,7 +83,7 @@
         rgba(11, 11, 11, 0.5),
         rgba(11, 11, 11, 0.5)
       ),
-      url('../images/header_bg_tablet.jpg');
+      url('../images/header/header_bg_tablet.jpg');
 
     &__content {
       padding-top: 40px;
@@ -170,7 +170,7 @@
   top: 0px;
   left: 0px;
   background-repeat: no-repeat;
-  background-image: url('../images/logo_bg_mobile.png');
+  background-image: url('../images/logo/logo_bg_mobile.png');
   width: 107px;
   height: 90px;
   padding-top: 25px;
@@ -189,7 +189,7 @@
     height: 150px;
     padding-top: 40px;
     padding-left: 40px;
-    background-image: url('../images/logo_bg_tablet.png');
+    background-image: url('../images/logo/logo_bg_tablet.png');
 
     &__icon {
       height: auto;
@@ -202,7 +202,7 @@
     padding-left: 40px;
     width: 238px;
     height: 200px;
-    background-image: url('../images/logo_bg_desktop.png');
+    background-image: url('../images/logo/logo_bg_desktop.png');
 
     &__icon {
       position: absolute;

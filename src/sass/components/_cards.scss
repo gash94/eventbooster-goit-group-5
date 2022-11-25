@@ -18,6 +18,7 @@
     margin: 0 2px 30px 2px;
     transition: 0.3s ease-in-out;
     transition-property: transform;
+
     &:hover,
     &:focus {
       transform: scale(1.1);
@@ -26,10 +27,14 @@
         box-shadow: 20px -16px 34px -15px rgba(220, 86, 197, 0.69);
       }
     }
+  }
+  &__box {
+    position: relative;
+
     &::before {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: -13px;
+      right: -1px;
       content: '';
       width: 108px;
       height: 101px;
@@ -99,7 +104,9 @@
       width: 196px;
       max-height: 312px;
       margin: 0 2px 30px 2px;
-
+    }
+    &__box {
+      position: relative;
       &::before {
         width: 153px;
         height: 143px;

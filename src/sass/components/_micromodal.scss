@@ -19,7 +19,7 @@
 .modal__container {
   background-color: #fff;
   padding: 30px;
-  width: 500px;
+  width: calc(946px * 0.75);
   max-height: 100vh;
   border-radius: 4px;
   overflow-y: auto;
@@ -59,6 +59,10 @@
   margin-bottom: 2rem;
   line-height: 1.5;
   color: rgba(0,0,0,.8);
+
+  display: flex;
+  flex-direction: columns;
+  gap: 5%;
 }
 
 .modal__btn {
@@ -124,6 +128,21 @@
     to { transform: translateY(-10%); }
 }
 
+@keyframes puffIn {
+  from {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
+  }
+}
+
 .micromodal-slide {
   display: none;
 }
@@ -136,9 +155,9 @@
   animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
-.micromodal-slide[aria-hidden="false"] .modal__container {
-  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
-}
+// .micromodal-slide[aria-hidden="false"] .modal__container {
+//   animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+// }
 
 .micromodal-slide[aria-hidden="true"] .modal__overlay {
   animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
@@ -170,4 +189,63 @@
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.event__image {
+  width: 35%;
+}
+.event__image img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__content {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.modal__content h2 {
+  color: #DC56C5;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.event__btn1 {
+  display: inline-block;
+  background-color: #4C00FE;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 19px;
+  padding-right: 19px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.event__btn2 {
+  display: inline-block;
+  background-color: #ffffff00;
+  color: #4C00FE;
+  border: 1px #4C00FE solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 19px;
+  padding-right: 19px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.event__single_price {
+  margin-bottom: 10px;
+}
+
+.modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

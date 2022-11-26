@@ -17,7 +17,7 @@ const renderPagination = pageInfo => {
   pagination = new Pagination('pagination', options);
 
   pagination.on('afterMove', function (eventData) {
-    cardEvents.innerHTML = '';
+    // cardEvents.innerHTML = '';
     renderCards(eventData.page - 1);
   });
 

@@ -5,6 +5,3 @@ import form from './js/chose-country';
 import fadeEffect from './js/loader';
 import modalTeam from './js/modal-team';
 import pagination from './js/pagination';
-import show from './js/spinner';
-
-  

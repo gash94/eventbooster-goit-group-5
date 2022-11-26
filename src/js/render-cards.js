@@ -25,10 +25,13 @@ const renderCards = (pageNumber = 0) => {
         urlTicket: item.url,
       }));
       notfound.innerText = '';
+      cards.innerHTML = '';
       markupEvents(eventDetails);
       renderPagination(pageInfo);
       if (pageNumber !== 0) {
-        onToTopBtn();
+        setTimeout(() => {
+          onToTopBtn();
+        }, 500);
       }
     })
     .catch(err => {

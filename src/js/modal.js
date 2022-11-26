@@ -1,3 +1,4 @@
+import { fetchEvent } from './fetch-data';
 import MicroModal from 'micromodal';
 const modalContentElem = document.querySelector('.modal__content');
 const modalTopImage = document.querySelector('.modal__top_image');
@@ -25,8 +26,9 @@ cardsElem.addEventListener("click", event => {
 async function updateModalData(eventId) {
   // const eventId = event.target.dataset.id;
 
-  const response = await fetch(`https://app.ticketmaster.com/discovery/v2/events/${eventId}.json?apikey=${apikey}`);
-  const eventData = await response.json();
+  // const response = await fetch(`https://app.ticketmaster.com/discovery/v2/events/${eventId}.json?apikey=${apikey}`);
+  const eventData = await fetchEvent(eventId);
+  
 
   console.log(eventData);
 

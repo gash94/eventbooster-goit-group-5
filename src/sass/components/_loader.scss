@@ -16,7 +16,6 @@ $Loader-offset: 1.5rem;
   justify-content: center;
   align-items: center;
   background-color: $text-color;
-  
 
   &__logo {
     position: absolute;
@@ -102,7 +101,6 @@ $color-html: hsl(300, 100%, 60%);
 }
 
 .progressbar__svg {
-  position: relative;
   width: 100%;
   height: 100%;
 }

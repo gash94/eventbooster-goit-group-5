@@ -45,7 +45,7 @@ const renderCards = (pageNumber = 0) => {
     .finally(() => {
       setTimeout(() => {
         spinner.classList.toggle('spinner-show');
-      }, 1500);
+      }, 1300);
     });
 };
 renderCards();

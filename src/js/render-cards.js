@@ -8,10 +8,13 @@ const inputSearch = document.querySelector('.search__input');
 const cards = document.querySelector('.cards');
 const form = document.querySelector('form');
 const notfound = document.querySelector('.notfound');
+const spinner = document.querySelector('.spinner');
+
 let searchValue = '';
 let country = 'pl';
 
 const renderCards = (pageNumber = 0) => {
+  spinner.classList.toggle('spinner-show');
   fetchEvents(searchValue, country, pageNumber)
     .then(({ events, pageInfo }) => {
       const eventDetails = events.map(item => ({
@@ -38,6 +41,11 @@ const renderCards = (pageNumber = 0) => {
       console.log(err);
       notfound.innerText =
         'Sorry, no matches were found. Try a new search or use our suggestions.';
+    })
+    .finally(() => {
+      setTimeout(() => {
+        spinner.classList.toggle('spinner-show');
+      }, 1500);
     });
 };
 renderCards();

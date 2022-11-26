@@ -1,7 +1,7 @@
 import fetchEvents from './fetch-data';
 import markupEvents from './markup-event';
 import renderPagination from './pagination';
-import { onToTopBtn } from './scroll';
+import { scrollPage, onToTopBtn } from './scroll';
 
 const inputSelectCountry = document.querySelector('#chose-country');
 const inputSearch = document.querySelector('.search__input');
@@ -33,7 +33,7 @@ const renderCards = (pageNumber = 0) => {
       renderPagination(pageInfo);
       if (pageNumber !== 0) {
         setTimeout(() => {
-          onToTopBtn();
+          scrollPage();
         }, 500);
       }
     })

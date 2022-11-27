@@ -15,7 +15,6 @@ async function fetchEvents(searchValue, country, page) {
         countryCode: country,
       },
     });
-    console.log(response.data);
     return {
       events: response.data._embedded.events,
       pageInfo: response.data.page,

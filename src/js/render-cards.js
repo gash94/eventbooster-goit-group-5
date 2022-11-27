@@ -3,6 +3,7 @@ import markupEvents from './markup-event';
 import renderPagination from './pagination';
 import { scrollPage, onToTopBtn } from './scroll';
 import { chooseBestImage } from './fetch-data';
+import MicroModal from 'micromodal';
 
 const inputSelectCountry = document.querySelector('#chose-country');
 const inputSearch = document.querySelector('.search__input');
@@ -10,6 +11,7 @@ const cards = document.querySelector('.cards');
 const form = document.querySelector('form');
 const notfound = document.querySelector('.notfound');
 const spinner = document.querySelector('.spinner');
+const moreAuthorBtn = document.querySelector('.event__btn2');
 
 let searchValue = '';
 let country = 'pl';
@@ -28,6 +30,7 @@ const renderCards = (pageNumber = 0) => {
         id: item.id,
         urlTicket: item.url,
       }));
+
       notfound.innerText = '';
       cards.innerHTML = '';
       markupEvents(eventDetails);
@@ -61,6 +64,14 @@ form.addEventListener('submit', e => {
   renderCards();
   inputSearch.value = '';
 });
-
+moreAuthorBtn.addEventListener('click', e => {
+  e.preventDefault();
+  cards.innerHTML = '';
+  console.log(e.target.dataset.name);
+  searchValue = e.target.dataset.name;
+  country = '';
+  renderCards();
+  MicroModal.close('modal-1');
+});
 export default renderCards;
 

@@ -26,7 +26,7 @@ async function fetchEvents(searchValue, country, page) {
 
 export default fetchEvents;
 
-export async function fetchEvent(eventId) {
+export async function fetchInfoEvent(eventId) {
   try {
     const response = await axios.get(`${BASE_URL}/${eventId}.json`, {
       method: 'get',

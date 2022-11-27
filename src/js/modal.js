@@ -18,7 +18,6 @@ cardsElem.addEventListener('click', event => {
   event.preventDefault();
 
   MicroModal.show('modal-1');
-  console.log(event.target.dataset.id);
   updateModalData(event.target.dataset.id);
 });
 

@@ -25,3 +25,18 @@ async function fetchEvents(searchValue, country, page) {
 }
 
 export default fetchEvents;
+
+export async function fetchInfoEvent(eventId) {
+  try {
+    const response = await axios.get(`${BASE_URL}/${eventId}.json`, {
+      method: 'get',
+      params: {
+        apikey: API_KEY,
+      },
+    });
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+}

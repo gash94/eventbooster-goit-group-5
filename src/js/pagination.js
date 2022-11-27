@@ -18,7 +18,8 @@ const renderPagination = pageInfo => {
 
   pagination.on('afterMove', function (eventData) {
     // cardEvents.innerHTML = '';
-    renderCards(eventData.page - 1);
+    let pageNumber = eventData.page - 1;
+    renderCards(pageNumber);
   });
 
   if (pageInfo.number === 0) {

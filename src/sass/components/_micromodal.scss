@@ -1,10 +1,5 @@
 // Źródło: https://gist.github.com/ghosh/4f94cf497d7090359a5c9f81caf60699#file-micromodal-css
 
-.modal {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
-    helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-}
-
 .modal__overlay {
   position: fixed;
   top: 0;
@@ -15,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2000;
 }
 
 .modal__container {
@@ -186,8 +182,8 @@
 .micromodal-slide .modal__overlay {
   will-change: transform;
 }
+
 .modal {
-  z-index: 2000;
   &__content {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;

@@ -74,10 +74,14 @@ export async function updateModalData(eventId) {
       'beforeend',
       `
       <div class="event__single_price">
-        <div>
-          ${priceRange.type} ${priceRange.min}-${priceRange.max} ${priceRange.currency}
+      <div>
+          ${priceRange.type.toUpperCase()} ${priceRange.min}-${
+        priceRange.max
+      } ${priceRange.currency}
         </div>
-        <a class="event__btn1 event__buy_tickets" href="${eventData.url}" target="_blank">BUY TICKETS</a>
+        <a class="event__btn1 event__buy_tickets" href="${
+          eventData.url
+        }" target="_blank">BUY TICKETS</a>
       </div>
     `
     );

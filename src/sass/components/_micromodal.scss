@@ -19,7 +19,7 @@
 .modal__container {
   background-color: #fff;
   padding: 30px;
-  width: calc(946px * 0.75);
+  width: calc(946px * 0.70);
   max-height: 100vh;
   border-radius: 4px;
   overflow-y: auto;
@@ -142,6 +142,7 @@
     filter: blur(0px);
   }
 }
+
 
 .micromodal-slide {
   display: none;

@@ -2,6 +2,7 @@ import fetchEvents from './fetch-data';
 import markupEvents from './markup-event';
 import renderPagination from './pagination';
 import { scrollPage, onToTopBtn } from './scroll';
+import { chooseBestImage } from './fetch-data';
 
 const inputSelectCountry = document.querySelector('#chose-country');
 const inputSearch = document.querySelector('.search__input');
@@ -62,3 +63,4 @@ form.addEventListener('submit', e => {
 });
 
 export default renderCards;
+

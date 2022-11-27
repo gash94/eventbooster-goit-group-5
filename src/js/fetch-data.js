@@ -35,8 +35,20 @@ export async function fetchEvent(eventId) {
       },
     });
     console.log(response.data);
+    chooseBestImage(response.data);
     return response.data;
   } catch (error) {
     console.log(error);
   }
+}
+ export function chooseBestImage(eventDetails) {
+  console.log(eventDetails, typeof eventDetails)
+  let urlImage;
+  for (image of eventDetails.images) {
+    console.log(image)
+    if (image.width > 400) {
+     urlImage = image.url
+    }
+  }
+  return urlImage;
 }

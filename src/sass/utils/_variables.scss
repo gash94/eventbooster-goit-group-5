@@ -9,3 +9,21 @@
   transition-property: transform;
   transform: rotate(180deg);
 }
+
+.backdrop {
+  position: fixed;
+  display: flex;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 1000ms ease-in, opacity 1000ms ease-in,
+    visibility 1000ms ease-in;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}

@@ -1,4 +1,4 @@
-export { scrollLoad };
+export { scrollPage, onToTopBtn };
 
 const toTopBtn = document.querySelector('.btn-to-top');
 
@@ -20,16 +20,8 @@ function onScroll() {
 function onToTopBtn() {
   window.scrollTo({ top: 200, behavior: 'smooth' });
 }
-
-function scrollLoad(multiplier) {
-  const { height: cardHeight } = document
-    .querySelector('.cards')
-    .firstElementChild.getBoundingClientRect();
-
-  window.scrollBy({
-    top: cardHeight * multiplier,
-    behavior: 'smooth',
-  });
+function scrollPage() {
+  window.scrollTo({ top: 340, behavior: 'smooth' });
 }
 
 export default scroll;

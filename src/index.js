@@ -2,6 +2,7 @@ import fetchEvents from './js/fetch-data';
 import renderCards from './js/render-cards';
 import markupEvents from './js/markup-event';
 import form from './js/chose-country';
-import './js/modal';
-
-
+import fadeEffect from './js/loader';
+import modalTeam from './js/modal-team';
+import pagination from './js/pagination';
+import modalEvent from './js/modal';

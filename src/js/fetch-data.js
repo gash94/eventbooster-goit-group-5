@@ -37,7 +37,7 @@ export async function fetchInfoEvent(eventId) {
       },
     });
     console.log(response.data);
-    
+
     return response.data;
   } catch (error) {
     console.log(error);
@@ -49,7 +49,7 @@ export async function fetchInfoEvent(eventId) {
 }
 
 export function chooseBestImage(eventDetails) {
-  for (image of eventDetails.images) {
+  for (let image of eventDetails.images) {
     if (image.width > 400) {
       return image.url;
     }

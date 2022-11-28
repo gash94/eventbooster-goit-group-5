@@ -37,6 +37,7 @@ export async function fetchInfoEvent(eventId) {
       },
     });
     console.log(response.data);
+    
     return response.data;
   } catch (error) {
     console.log(error);
@@ -45,4 +46,14 @@ export async function fetchInfoEvent(eventId) {
       spinner.classList.toggle('spinner-show');
     }, 1100);
   }
+}
+
+export function chooseBestImage(eventDetails) {
+  for (image of eventDetails.images) {
+    if (image.width > 400) {
+      return image.url;
+    }
+  }
+
+  return eventDetails.images[0].url;
 }

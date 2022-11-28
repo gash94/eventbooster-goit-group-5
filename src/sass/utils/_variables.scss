@@ -19,6 +19,8 @@
   left: 0;
   right: 0;
   bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
   transition: all 1000ms ease-in, opacity 1000ms ease-in,
     visibility 1000ms ease-in;
 }

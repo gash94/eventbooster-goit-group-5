@@ -22,7 +22,7 @@ const renderCards = (pageNumber = 0) => {
     .then(({ events, pageInfo }) => {
       const eventDetails = events.map(item => ({
         name: item.name,
-        urlImage: item.images[4].url,
+        urlImage: chooseBestImage(item),
         date: item.dates.start.localDate,
         place: item._embedded ? item._embedded.venues[0].name : '', // property not availabe sometimes
         city: item._embedded ? item._embedded.venues[0].city.name : '', // property not availabe sometimes

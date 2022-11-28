@@ -1,5 +1,55 @@
-// Źródło: https://gist.github.com/ghosh/4f94cf497d7090359a5c9f81caf60699#file-micromodal-css
+// Z magictime
+.magictime {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
 
+@media (print), (prefers-reduced-motion) {
+  .magictime {
+    -webkit-animation: unset !important;
+            animation: unset !important;
+    transition: none !important;
+  }
+}
+
+.puffIn {
+  -webkit-animation-name: puffIn;
+          animation-name: puffIn;
+}
+
+@-webkit-keyframes puffIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
+  }
+}
+@keyframes puffIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
+  }
+}
+
+
+// Źródło: https://gist.github.com/ghosh/4f94cf497d7090359a5c9f81caf60699#file-micromodal-css
 .modal__overlay {
   position: fixed;
   top: 0;

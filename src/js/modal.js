@@ -44,19 +44,19 @@ export async function updateModalData(eventId) {
   );
 
   infoElem.textContent = eventData.info || eventData.description;
-  if(! infoElem.textContent) {
+  if (!infoElem.textContent) {
     infoElem.style = 'display: none';
-    infoTitleElem.style ='display: none';
+    infoTitleElem.style = 'display: none';
   } else {
     infoElem.style = 'display: block';
-    infoTitleElem.style ='display: block';
+    infoTitleElem.style = 'display: block';
   }
 
-  startDateElem.innerHTML = `
-    ${eventData.dates.start.localDate}
-    <br>
-    ${eventData.dates.start.localTime} (${eventData.dates.timezone})
-  `;
+  startDateElem.innerHTML = eventData.dates.start.localDate;
+
+  if(eventData.dates.start.localTime) {
+    startDateElem.innerHTML = startDateElem.innerHTML + `<br>${eventData.dates.start.localTime} (${eventData.dates.timezone})`;
+  }
 
   whoElem.textContent = eventData.name;
 
@@ -71,25 +71,21 @@ export async function updateModalData(eventId) {
     );
   }
 
-  if(eventData.priceRanges.length === 0) {
+  if (!eventData.priceRanges) {
     pricesElem.innerHTML = 'There are no tickets available for this event';
-  }
-
-  for (const priceRange of eventData.priceRanges) {
-    pricesElem.insertAdjacentHTML(
-      'beforeend',
-      `
-      <div class="event__single_price">
-      <div>
-          ${priceRange.type.toUpperCase()} ${priceRange.min}-${
-        priceRange.max
-      } ${priceRange.currency}
-        </div>
-        <a class="event__btn1 event__buy_tickets" href="${
-          eventData.url
-        }" target="_blank">BUY TICKETS</a>
-      </div>
-    `
-    );
+  } else {
+    for (const priceRange of eventData.priceRanges) {
+      pricesElem.insertAdjacentHTML(
+        'beforeend', `
+          <div class="event__single_price">
+          <div>
+              ${priceRange.type.toUpperCase()} ${priceRange.min}-${priceRange.max} ${priceRange.currency}
+            </div>
+            <a class="event__btn1 event__buy_tickets" href="${
+              eventData.url
+            }" target="_blank">BUY TICKETS</a>
+          </div>
+      `);
+    }
   }
 }

@@ -1,22 +1,22 @@
 // Z magictime
 .magictime {
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @media (print), (prefers-reduced-motion) {
   .magictime {
     -webkit-animation: unset !important;
-            animation: unset !important;
+    animation: unset !important;
     transition: none !important;
   }
 }
 
 .puffIn {
   -webkit-animation-name: puffIn;
-          animation-name: puffIn;
+  animation-name: puffIn;
 }
 
 @-webkit-keyframes puffIn {
@@ -48,7 +48,6 @@
   }
 }
 
-
 // Źródło: https://gist.github.com/ghosh/4f94cf497d7090359a5c9f81caf60699#file-micromodal-css
 .modal__overlay {
   position: fixed;
@@ -56,7 +55,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: $bg-overlay;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,9 +63,9 @@
 }
 
 .modal__container {
-  background-color: #fff;
+  background-color: $bg-color;
   padding: 30px;
-  width: calc(946px * 0.70);
+  width: calc(946px * 0.7);
   max-height: 100vh;
   border-radius: 4px;
   overflow-y: auto;
@@ -85,7 +84,7 @@
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.25;
-  color: #00449e;
+  color: $focus-color;
   box-sizing: border-box;
 }
 
@@ -96,8 +95,8 @@
 
 .modal__header .modal__close:before {
   content: '\2715';
-  color: #4c00fe;
-  font-size: 25px;
+  color: $main-color;
+  font-size: $high-size;
   cursor: pointer;
 }
 
@@ -105,8 +104,7 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.8);
-
+  color: $bg-overlay;
   display: flex;
   flex-direction: columns;
   gap: 5%;
@@ -118,8 +116,8 @@
   padding-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  background-color: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
+  background-color: $accent-color;
+  color: $bg-overlay;
   border-radius: 0.25rem;
   border-style: none;
   border-width: 0;
@@ -146,8 +144,8 @@
 }
 
 .modal__btn-primary {
-  background-color: #00449e;
-  color: #fff;
+  background-color: $second-color;
+  color: $accent-color;
 }
 
 /**************************\
@@ -204,7 +202,6 @@
   }
 }
 
-
 .micromodal-slide {
   display: none;
 }
@@ -237,14 +234,14 @@
 .modal {
   &__content {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: $medium-size;
     font-weight: 400;
   }
 
   &__content h2 {
-    color: #dc56c5;
+    color: $second-color;
     font-weight: 600;
-    font-size: 20px;
+    font-size: $normal-size;
   }
 
   &__container {
@@ -293,10 +290,10 @@
   }
   &__btn1 {
     display: inline-block;
-    background-color: #4c00fe;
-    border: 1px #4c00fe solid;
-    color: white;
+    background-color: $main-color;
+    color: $accent-color;
     padding-top: 10px;
+    border: 1px solid $main-color;
     padding-bottom: 10px;
     padding-left: 19px;
     padding-right: 19px;
@@ -306,10 +303,10 @@
     font-weight: 500;
     cursor: pointer;
     transition: 0.5s ease-in-out;
-    &:hover {
-      background-color: #ffffff;
-      color: #4c00fe;
-      border: 1px #4c00fe solid;
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+      color: $main-color;
     }
   }
   &__info {
@@ -318,22 +315,20 @@
   }
   &__btn2 {
     display: inline-block;
-    background-color: #ffffff;
-    color: #4c00fe;
-    border: 1px #4c00fe solid;
+    background-color: $bg-color;
+    color: $main-color;
+    border: 1px $main-color solid;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 19px;
     padding-right: 19px;
     border-radius: 5px;
-
     font-weight: 500;
-
     cursor: pointer;
     transition: 0.5s ease-in-out;
     &:hover {
-      color: #ffffff;
-      background: #4c00fe;
+      color: $bg-color;
+      background: $main-color;
     }
   }
   &__single_price {

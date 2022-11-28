@@ -5,18 +5,18 @@
 
   &__content {
     text-align: center;
-    color: #939393;
-    font-size: 14px;
+    color: $fill-color;
+    font-size: $small-size;
     line-height: 1.22;
   }
   &__link {
     color: inherit;
     &:hover,
     &:focus {
-      color: rgba(220, 86, 197, 1);
+      color: $second-color;
       font-weight: 700;
       transition: all 250ms linear;
-      text-shadow: 0 0 11px rgba(220, 86, 197, 1);
+      text-shadow: 0 0 11px $second-color;
     }
   }
 }
@@ -33,7 +33,7 @@
     margin-right: auto;
 
     &__content {
-      font-size: 16px;
+      font-size: $medium-size;
     }
   }
 }
@@ -42,7 +42,7 @@
   .footer {
     padding-bottom: 19px;
     &__content {
-      font-size: 16px;
+      font-size: $medium-size;
     }
   }
 }

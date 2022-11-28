@@ -26,7 +26,7 @@
       transition: 0.3s ease-in-out;
       cursor: pointer;
       .cards__image {
-        box-shadow: 20px -16px 34px -15px rgba(220, 86, 197, 0.69);
+        box-shadow: 20px -16px 34px -15px $box-color;
       }
     }
   }
@@ -42,7 +42,7 @@
       content: '';
       width: 108px;
       height: 101px;
-      border: 1px solid rgba(220, 86, 197, 0.3);
+      border: 1px solid $third-color;
       border-radius: 50px 0px;
     }
   }
@@ -58,23 +58,23 @@
   }
   &__title {
     font-weight: 700;
-    font-size: 14px;
+    font-size: $small-size;
     line-height: 17px;
-    color: #dc56c5;
+    color: $second-color;
     margin: 5px 0;
   }
   &__date {
     font-weight: 400;
-    font-size: 14px;
+    font-size: $small-size;
     line-height: 17px;
-    color: #ffffff;
+    color: $accent-color;
     margin: 2px 0;
   }
   &__place {
     font-weight: 600;
-    font-size: 12px;
+    font-size: $little-size;
     line-height: 15px;
-    color: #ffffff;
+    color: $accent-color;
     margin: 2px 0;
   }
   &__pin {
@@ -94,10 +94,10 @@
   display: block;
   margin-top: 70px;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: $accent-color;
   text-align: center;
   font-weight: 400;
-  font-size: 25px;
+  font-size: $high-size;
   line-height: 17px;
 }
 //  tablet
@@ -121,15 +121,15 @@
       height: 227px;
     }
     &__title {
-      font-size: 16px;
+      font-size: $medium-size;
       line-height: 20px;
     }
     &__date {
-      font-size: 16px;
+      font-size: $medium-size;
       line-height: 20px;
     }
     &__place {
-      font-size: 14px;
+      font-size: $small-size;
       line-height: 17px;
     }
     &__pin {
@@ -164,12 +164,12 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  color: rgb(0, 0, 0);
+  color: $text-color;
   cursor: pointer;
   opacity: 0.9;
   transition: 0.3s ease-in-out;
   display: none;
-  background: rgba(255, 255, 255, 0.2);
+  background: $shadow-color;
   backdrop-filter: blur(20px);
 
   &__icon {
@@ -179,11 +179,11 @@
     transform: rotate(180deg);
     width: 25px;
     height: 25px;
-    fill: #939393;
+    fill: $fill-color;
   }
   &:hover {
-    background-color: #dc56c5;
+    background-color: $second-color;
     backdrop-filter: blur(20px);
-    box-shadow: 1px 3px 24px -5px rgba(220, 86, 197, 0.69);
+    box-shadow: 1px 3px 24px -5px $box-color;
   }
 }

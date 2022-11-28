@@ -24,14 +24,13 @@ const renderCards = (pageNumber = 0) => {
         name: item.name,
         urlImage: chooseBestImage(item),
         date: item.dates.start.localDate,
-        place:
-          item._embedded.venues[0].name ||
-          item._embedded.venues[0].address.line1, // property not availabe sometimes
-        city: item._embedded.venues[0].city.name,
-        country: item._embedded.venues[0].country.name,
+        place: item._embedded ? item._embedded.venues[0].name : '',
+        city: item._embedded ? item._embedded.venues[0].city.name : '', // property not availabe sometimes
+        country: item._embedded ? item._embedded.venues[0].country.name : '', // property not availabe sometimes
         id: item.id,
         urlTicket: item.url,
       }));
+      console.log(events);
       notfound.innerText = '';
       cards.innerHTML = '';
       markupEvents(eventDetails);

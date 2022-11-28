@@ -1,22 +1,22 @@
 // Z magictime
 .magictime {
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @media (print), (prefers-reduced-motion) {
   .magictime {
     -webkit-animation: unset !important;
-            animation: unset !important;
+    animation: unset !important;
     transition: none !important;
   }
 }
 
 .puffIn {
   -webkit-animation-name: puffIn;
-          animation-name: puffIn;
+  animation-name: puffIn;
 }
 
 @-webkit-keyframes puffIn {
@@ -48,7 +48,6 @@
   }
 }
 
-
 // Źródło: https://gist.github.com/ghosh/4f94cf497d7090359a5c9f81caf60699#file-micromodal-css
 .modal__overlay {
   position: fixed;
@@ -66,7 +65,7 @@
 .modal__container {
   background-color: $bg-color;
   padding: 30px;
-  width: calc(946px * 0.70);
+  width: calc(946px * 0.7);
   max-height: 100vh;
   border-radius: 4px;
   overflow-y: auto;
@@ -146,7 +145,7 @@
 
 .modal__btn-primary {
   background-color: $second-color;
-  color:$accent-color;
+  color: $accent-color;
 }
 
 /**************************\
@@ -202,7 +201,6 @@
     filter: blur(0px);
   }
 }
-
 
 .micromodal-slide {
   display: none;
@@ -295,6 +293,7 @@
     background-color: $main-color;
     color: $accent-color;
     padding-top: 10px;
+    border: 1px solid $main-color;
     padding-bottom: 10px;
     padding-left: 19px;
     padding-right: 19px;
@@ -306,8 +305,8 @@
     transition: 0.5s ease-in-out;
     &:hover,
     &:focus {
-      background-color: $focus-color;
-      color: $accent-color;
+      background-color: $accent-color;
+      color: $main-color;
     }
   }
   &__info {
@@ -318,7 +317,7 @@
     display: inline-block;
     background-color: $bg-color;
     color: $main-color;
-    border: 1px $second-color solid;
+    border: 1px $main-color solid;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 19px;
@@ -328,7 +327,7 @@
     cursor: pointer;
     transition: 0.5s ease-in-out;
     &:hover {
-      color: $accent-color;
+      color: $bg-color;
       background: $main-color;
     }
   }

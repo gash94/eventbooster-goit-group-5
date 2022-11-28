@@ -16,6 +16,7 @@ $Loader-offset: 1.5rem;
   justify-content: center;
   align-items: center;
   background-color: $text-color;
+  z-index: 2000;
 
   &__logo {
     position: absolute;

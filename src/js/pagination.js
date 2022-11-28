@@ -6,8 +6,15 @@ const cardEvents = document.querySelector('.cards');
 let pagination;
 
 const renderPagination = pageInfo => {
+  let totalEl;
+  if (pageInfo.totalElements > 1000) {
+    totalEl = 1000;
+  } else {
+    totalEl = pageInfo.totalElements;
+  }
+
   const options = {
-    totalItems: pageInfo.totalElements,
+    totalItems: totalEl,
     itemsPerPage: pageInfo.size,
     visiblePages: 5,
     page: pageInfo.number + 1,

@@ -88,6 +88,27 @@
     &__content {
       padding-top: 40px;
       padding-bottom: 183px;
+      position: relative;
+      &::after {
+        position: absolute;
+        background-image: url('../images/header/decor.png');
+
+        top: 0;
+        left: 7px;
+        margin: 0;
+        content: '';
+        width: 1px;
+        height: 446px;
+      }
+      &::before {
+        position: absolute;
+        background-image: url('../images/header/decor.png');
+        top: 0;
+        right: 7px;
+        content: '';
+        width: 1px;
+        height: 448px;
+      }
     }
     &__field {
       display: inline-block;
@@ -121,6 +142,27 @@
 
     &__content {
       padding-bottom: 192px;
+      position: relative;
+      &::after {
+        position: absolute;
+        background-image: url('../images/header/decor.png');
+
+        top: 0;
+        left: -52px;
+        margin: 0;
+        content: '';
+        width: 1px;
+        height: 446px;
+      }
+      &::before {
+        position: absolute;
+        background-image: url('../images/header/decor.png');
+        top: 0;
+        right: -53px;
+        content: '';
+        width: 1px;
+        height: 446px;
+      }
     }
     &__title {
       width: 600px;
@@ -174,6 +216,7 @@
   height: 90px;
   padding-top: 25px;
   padding-left: 25px;
+  z-index: 10;
 
   &__icon {
     position: absolute;

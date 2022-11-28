@@ -45,6 +45,7 @@ const renderCards = (pageNumber = 0) => {
       console.log(err);
       notfound.innerText =
         'Sorry, no matches were found. Try a new search or use our suggestions.';
+        notfound.style.lineHeight = "1.0em";
     })
     .finally(() => {
       setTimeout(() => {

@@ -32,7 +32,6 @@ const renderCards = (pageNumber = 0) => {
         id: item.id,
         urlTicket: item.url,
       }));
-      console.log(events);
       notfound.innerText = '';
       cards.innerHTML = '';
       markupEvents(eventDetails);
@@ -61,8 +60,6 @@ form.addEventListener('submit', e => {
   cards.innerHTML = '';
   searchValue = inputSearch.value.trim();
   country = inputSelectCountry.dataset.country;
-  console.log('value:', searchValue);
-  console.log('country:', country);
   renderCards();
   inputSearch.value = '';
 });

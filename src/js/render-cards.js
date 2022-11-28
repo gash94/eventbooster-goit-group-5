@@ -1,7 +1,8 @@
 import fetchEvents from './fetch-data';
 import markupEvents from './markup-event';
 import renderPagination from './pagination';
-import { scrollPage, onToTopBtn } from './scroll';
+import { scrollPage } from './scroll';
+import { chooseBestImage } from './fetch-data';
 import MicroModal from 'micromodal';
 
 const inputSelectCountry = document.querySelector('#chose-country');
@@ -21,7 +22,7 @@ const renderCards = (pageNumber = 0) => {
     .then(({ events, pageInfo }) => {
       const eventDetails = events.map(item => ({
         name: item.name,
-        urlImage: item.images[4].url,
+        urlImage: chooseBestImage(item),
         date: item.dates.start.localDate,
         place: item._embedded ? item._embedded.venues[0].name : '', // property not availabe sometimes
         city: item._embedded ? item._embedded.venues[0].city.name : '', // property not availabe sometimes

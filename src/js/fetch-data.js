@@ -1,3 +1,4 @@
+const spinner = document.querySelector('.spinner');
 const axios = require('axios').default;
 
 const BASE_URL = 'https://app.ticketmaster.com/discovery/v2/events';
@@ -28,6 +29,7 @@ export default fetchEvents;
 
 export async function fetchInfoEvent(eventId) {
   try {
+    spinner.classList.toggle('spinner-show');
     const response = await axios.get(`${BASE_URL}/${eventId}.json`, {
       method: 'get',
       params: {
@@ -35,8 +37,23 @@ export async function fetchInfoEvent(eventId) {
       },
     });
     console.log(response.data);
+    
     return response.data;
   } catch (error) {
     console.log(error);
+  } finally {
+    setTimeout(() => {
+      spinner.classList.toggle('spinner-show');
+    }, 1100);
   }
+}
+
+export function chooseBestImage(eventDetails) {
+  for (image of eventDetails.images) {
+    if (image.width > 400) {
+      return image.url;
+    }
+  }
+
+  return eventDetails.images[0].url;
 }

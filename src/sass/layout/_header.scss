@@ -1,10 +1,7 @@
 .header {
   position: relative;
 
-  background-image: linear-gradient(
-      rgba(11, 11, 11, 0.5),
-      rgba(11, 11, 11, 0.5)
-    ),
+  background-image: linear-gradient($gradient-color, $gradient-color),
     url('../images/header/header_bg_mobile.jpg');
 
   background-position: center;
@@ -34,7 +31,7 @@
     width: 212px;
     font-weight: 900;
     font-size: 18px;
-    color: rgba(220, 86, 197, 1);
+    color: $second-color;
     margin-bottom: 25px;
     margin-left: auto;
     margin-right: auto;
@@ -46,15 +43,15 @@
     width: 270px;
     height: 40px;
     border: 0;
-    color: #939393;
+    color: $fill-color;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: $shadow-color;
     backdrop-filter: blur(20px);
     outline: none;
     position: relative;
     transition: 0.3s ease-in-out;
     &:focus {
-      box-shadow: 1px 3px 24px -5px rgba(220, 86, 197, 0.69);
+      box-shadow: 1px 3px 24px -5px $box-color;
     }
 
     &--open {
@@ -69,8 +66,8 @@
     left: 0;
     background: linear-gradient(
       180deg,
-      rgba(13, 13, 13, 0.19) 0%,
-      rgba(14, 14, 14, 0.8) 100%
+      $bg-gradient-color 0%,
+      $bg-linear-color 100%
     );
     width: 100%;
     height: 102px;
@@ -79,10 +76,7 @@
 
 @media screen and (min-width: 768px) {
   .header {
-    background-image: linear-gradient(
-        rgba(11, 11, 11, 0.5),
-        rgba(11, 11, 11, 0.5)
-      ),
+    background-image: linear-gradient($gradient-color, $gradient-color),
       url('../images/header/header_bg_tablet.jpg');
 
     &__content {
@@ -128,10 +122,7 @@
 
 @media screen and (min-width: 1024px) {
   .header {
-    background-image: linear-gradient(
-        rgba(11, 11, 11, 0.5),
-        rgba(11, 11, 11, 0.5)
-      ),
+    background-image: linear-gradient($gradient-color, $gradient-color),
       url('../images/header/header-bg-desktop.png');
 
     @media (min-device-pixel-ratio: 2) and (min-width: 1280px),
@@ -176,7 +167,6 @@
   &__submit {
     width: 40px;
     height: 40px;
-    // border: 1px solid #000;
     background: none;
     position: absolute;
     top: 0;
@@ -194,7 +184,7 @@
     position: absolute;
     top: 13px;
     right: 15px;
-    fill: #939393;
+    fill: $fill-color;
   }
 }
 
@@ -202,7 +192,7 @@
   position: absolute;
   top: 15px;
   right: 30px;
-  fill: #939393;
+  fill: $fill-color;
   transition: 0.5s ease-in-out;
   transition-property: transform;
 }
@@ -264,18 +254,18 @@
 // Country list input
 .country {
   position: absolute;
-  color: white;
+  color: $accent-color;
   overflow: auto;
   width: 270px;
   top: 40px;
   min-height: 20px;
   max-height: 194px;
-  background: rgba(255, 255, 255, 0.2);
+  background: $shadow-color;
   backdrop-filter: blur(20px);
-  border-top: 1px solid #939393;
+  border-top: 1px solid $fill-color;
   border-radius: 0px 0px 25px 25px;
   z-index: 15;
-  box-shadow: 1px 3px 24px -5px rgba(220, 86, 197, 0.69);
+  box-shadow: 1px 3px 24px -5px $box-color;
   &__list {
     list-style: none;
   }
@@ -283,9 +273,9 @@
   &__item {
     padding: 4px 10px 4px 30px;
     text-align: left;
-    font-size: 16px;
+    font-size: $medium-size;
     line-height: 19.5px;
-    color: #cccccc;
+    color: $blur-color;
     cursor: pointer;
 
     &:last-child {
@@ -293,7 +283,7 @@
     }
 
     &:hover {
-      background-color: #dc56c5;
+      background-color: $second-color;
     }
   }
   &::-webkit-scrollbar {
@@ -304,7 +294,7 @@
     border: 4px solid rgba(0, 0, 0, 0);
     background-clip: padding-box;
     border-radius: 10px;
-    background-color: #939393;
+    background-color: $fill-color;
   }
   &::-webkit-scrollbar-track-piece:start {
     margin-top: 2px;
@@ -319,13 +309,13 @@
   display: block;
   background-image: radial-gradient(
     ellipse 50% 35% at 50% 50%,
-    #6b1839,
+    $title-color,
     transparent
   );
 
-  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-    -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-    0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  text-shadow: 0 0 0.6rem $light-color, 0 0 1.5rem $bright-color,
+    -0.2rem 0.1rem 1rem $bright-color, 0.2rem 0.1rem 1rem $bright-color,
+    0 -0.5rem 2rem$dark-color, 0 0.5rem 3rem$dark-color;
   animation: shine 3s forwards, flicker 5s infinite;
 }
 
@@ -334,19 +324,19 @@
   22%,
   36%,
   75% {
-    color: #ffe6ff;
-    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    color: $light-color;
+    text-shadow: 0 0 0.6rem $light-color, 0 0 1.5rem $bright-color,
+      -0.2rem 0.1rem 1rem $bright-color, 0.2rem 0.1rem 1rem $bright-color,
+      0 -0.5rem 2rem$dark-color, 0 0.5rem 3rem$dark-color;
   }
   28%,
   33% {
-    color: #ff65bd;
+    color: $bright-color;
     text-shadow: none;
   }
   82%,
   97% {
-    color: #ff2483;
+    color: $dark-color;
     text-shadow: none;
   }
 }
@@ -364,14 +354,14 @@
 
 @keyframes shine {
   0% {
-    color: #6b1839;
+    color: $title-color;
     text-shadow: none;
   }
   100% {
-    color: #ffe6ff;
-    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    color: $light-color;
+    text-shadow: 0 0 0.6rem $light-color, 0 0 1.5rem $bright-color,
+      -0.2rem 0.1rem 1rem $bright-color, 0.2rem 0.1rem 1rem $bright-color,
+      0 -0.5rem 2rem $dark-color, 0 0.5rem 3rem $dark-color;
   }
 }
 

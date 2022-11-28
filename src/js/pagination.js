@@ -24,10 +24,14 @@ const renderPagination = pageInfo => {
 
   if (pageInfo.number === 0) {
     const prev = document.querySelector('.tui-prev');
+    const first = document.querySelector('.tui-first');
     prev.style.display = 'none';
+    first.style.display = 'none';
   } else if (pageInfo.number + 1 === pageInfo.totalPages) {
     const next = document.querySelector('.tui-next');
+    const last = document.querySelector('.tui-last');
     next.style.display = 'none';
+    last.style.display = 'none';
   }
 };
 

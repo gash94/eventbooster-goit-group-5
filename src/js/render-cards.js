@@ -1,7 +1,7 @@
 import fetchEvents from './fetch-data';
 import markupEvents from './markup-event';
 import renderPagination from './pagination';
-import { scrollPage, onToTopBtn } from './scroll';
+import { scrollPage } from './scroll';
 import { chooseBestImage } from './fetch-data';
 import MicroModal from 'micromodal';
 
@@ -74,4 +74,3 @@ moreAuthorBtn.addEventListener('click', e => {
   MicroModal.close('modal-1');
 });
 export default renderCards;
-

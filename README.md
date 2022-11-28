@@ -15,16 +15,6 @@ the search for the name and optionally the country
 - parcel
 - git
 
-Project implemented:
-
-- xxx
-
-- additionally:
-  - customize scroll
-  - loader
-  - smooth scroll to the top
-  - dark/light theme toggle
-
 ## Development team:
 
 [Paweł "Gash" Gasz](https://github.com/gash94) (Team Leader)

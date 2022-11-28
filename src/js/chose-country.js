@@ -11,7 +11,6 @@ const form = document.querySelector('form');
 inputSelectCountry.addEventListener('click', e => {
   countryBox.classList.toggle('hide');
   polygonIcon.classList.toggle('rotate');
-  console.log(inputSelectCountry.value);
   inputSelectCountry.value = '';
   renderListCountry(e);
   inputSelectCountry.classList.toggle('header__input--open');

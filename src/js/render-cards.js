@@ -1,7 +1,7 @@
 import fetchEvents from './fetch-data';
 import markupEvents from './markup-event';
 import renderPagination from './pagination';
-import { scrollPage, onToTopBtn } from './scroll';
+import { scrollPage } from './scroll';
 import { chooseBestImage } from './fetch-data';
 import MicroModal from 'micromodal';
 
@@ -24,13 +24,14 @@ const renderCards = (pageNumber = 0) => {
         name: item.name,
         urlImage: chooseBestImage(item),
         date: item.dates.start.localDate,
-        place: item._embedded ? item._embedded.venues[0].name : '', // property not availabe sometimes
-        city: item._embedded ? item._embedded.venues[0].city.name : '', // property not availabe sometimes
-        country: item._embedded ? item._embedded.venues[0].country.name : '', // property not availabe sometimes
+        place:
+          item._embedded.venues[0].name ||
+          item._embedded.venues[0].address.line1, // property not availabe sometimes
+        city: item._embedded.venues[0].city.name,
+        country: item._embedded.venues[0].country.name,
         id: item.id,
         urlTicket: item.url,
       }));
-
       notfound.innerText = '';
       cards.innerHTML = '';
       markupEvents(eventDetails);
@@ -59,8 +60,6 @@ form.addEventListener('submit', e => {
   cards.innerHTML = '';
   searchValue = inputSearch.value.trim();
   country = inputSelectCountry.dataset.country;
-  console.log('value:', searchValue);
-  console.log('country:', country);
   renderCards();
   inputSearch.value = '';
 });
@@ -74,4 +73,3 @@ moreAuthorBtn.addEventListener('click', e => {
   MicroModal.close('modal-1');
 });
 export default renderCards;
-

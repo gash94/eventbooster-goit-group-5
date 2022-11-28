@@ -52,11 +52,13 @@ export async function updateModalData(eventId) {
     infoTitleElem.style = 'display: block';
   }
 
-  startDateElem.innerHTML = eventData.dates.start.localDate;
 
-  if(eventData.dates.start.localTime) {
-    startDateElem.innerHTML = startDateElem.innerHTML + `<br>${eventData.dates.start.localTime} (${eventData.dates.timezone})`;
-  }
+  startDateElem.innerHTML = `
+    ${eventData.dates.start.localDate}
+    <br>
+    ${eventData.dates.start.localTime || ''} (${eventData.dates.timezone})
+  `;
+
 
   whoElem.textContent = eventData.name;
 
@@ -71,7 +73,9 @@ export async function updateModalData(eventId) {
     );
   }
 
+
   if (!eventData.priceRanges) {
+
     pricesElem.innerHTML = 'There are no tickets available for this event';
   } else {
     for (const priceRange of eventData.priceRanges) {

@@ -70,7 +70,7 @@
       $bg-linear-color 100%
     );
     width: 100%;
-    height: 102px;
+    height: 0;
   }
 }
 
@@ -78,7 +78,9 @@
   .header {
     background-image: linear-gradient($gradient-color, $gradient-color),
       url('../images/header/header_bg_tablet.jpg');
-
+    &__gradient {
+      height: 50px;
+    }
     &__content {
       padding-top: 40px;
       padding-bottom: 183px;
@@ -86,7 +88,6 @@
       &::after {
         position: absolute;
         background-image: url('../images/header/decor.png');
-
         top: 0;
         left: 7px;
         margin: 0;
@@ -130,7 +131,9 @@
       (min-resolution: 2dppx) and (min-width: 1280px) {
       background-image: url('../images/header/header-bg-desktop@2x.png');
     }
-
+    &__gradient {
+      height: 102px;
+    }
     &__content {
       padding-bottom: 192px;
       position: relative;

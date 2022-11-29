@@ -24,7 +24,6 @@ const renderPagination = pageInfo => {
   pagination = new Pagination('pagination', options);
 
   pagination.on('afterMove', function (eventData) {
-    // cardEvents.innerHTML = '';
     let pageNumber = eventData.page - 1;
     renderCards(pageNumber);
   });

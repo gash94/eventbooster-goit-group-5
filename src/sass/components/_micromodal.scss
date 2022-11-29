@@ -247,7 +247,7 @@
   &__container {
     border-top-left-radius: 150px;
     border-bottom-right-radius: 150px;
-    width: 272px;
+    margin: auto 12px;
   }
 
   &__top_image {
@@ -267,7 +267,10 @@
   &__footer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 74px;
   }
 }
 
@@ -312,6 +315,14 @@
   &__info {
     max-height: 100px;
     overflow: auto;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $main-color;
+      border-radius: 10px;
+      height: 50px;
+    }
   }
   &__btn2 {
     display: inline-block;
@@ -320,8 +331,8 @@
     border: 1px $main-color solid;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 19px;
-    padding-right: 19px;
+    padding-left: 3px;
+    padding-right: 3px;
     border-radius: 5px;
     font-weight: 500;
     cursor: pointer;
@@ -353,7 +364,11 @@
     &__container {
       width: 595px;
     }
+    &__footer {
+      width: 260px;
+    }
   }
+
   .event {
     &__image {
       display: block;
@@ -374,6 +389,10 @@
         display: block;
       }
     }
+    &__btn2 {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 }
 //  desktop
@@ -388,6 +407,9 @@
 
     &__content h2 {
       font-size: 24px;
+    }
+    &__footer {
+      width: 260px;
     }
   }
   .event {
@@ -407,6 +429,10 @@
       max-width: 450px;
       max-height: 100px;
       overflow: auto;
+    }
+    &__btn2 {
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 }

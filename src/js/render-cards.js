@@ -24,9 +24,10 @@ const renderCards = (pageNumber = 0) => {
         name: item.name,
         urlImage: chooseBestImage(item),
         date: item.dates.start.localDate,
-        place: item._embedded ? item._embedded.venues[0].name : '',
-        city: item._embedded ? item._embedded.venues[0].city.name : '', // property not availabe sometimes
-        country: item._embedded ? item._embedded.venues[0].country.name : '', // property not availabe sometimes
+        place:
+          item._embedded && item._embedded.venues[0].name
+            ? item._embedded.venues[0].namexD
+            : 'Place will be soon',
         id: item.id,
         urlTicket: item.url,
       }));

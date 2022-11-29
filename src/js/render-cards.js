@@ -26,7 +26,7 @@ const renderCards = (pageNumber = 0) => {
         date: item.dates.start.localDate,
         place:
           item._embedded && item._embedded.venues[0].name
-            ? item._embedded.venues[0].namexD
+            ? item._embedded.venues[0].name
             : 'Place will be soon',
         id: item.id,
         urlTicket: item.url,

@@ -12,6 +12,7 @@ const form = document.querySelector('form');
 const notfound = document.querySelector('.notfound');
 const spinner = document.querySelector('.spinner');
 const moreAuthorBtn = document.querySelector('.event__btn2');
+const paginationBox = document.querySelector('.tui-pagination');
 
 let searchValue = '';
 let country = 'pl';
@@ -36,6 +37,7 @@ const renderCards = (pageNumber = 0) => {
       cards.innerHTML = '';
       markupEvents(eventDetails);
       renderPagination(pageInfo);
+      paginationBox.style.display = 'flex';
       if (pageNumber !== 0) {
         setTimeout(() => {
           scrollPage();
@@ -44,9 +46,10 @@ const renderCards = (pageNumber = 0) => {
     })
     .catch(err => {
       console.log(err);
+      paginationBox.style.display = 'none';
+      notfound.style.display = 'block';
       notfound.innerText =
         'Sorry, no matches were found. Try a new search or use our suggestions.';
-        notfound.style.lineHeight = "1.0em";
     })
     .finally(() => {
       setTimeout(() => {

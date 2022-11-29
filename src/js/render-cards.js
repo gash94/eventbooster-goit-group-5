@@ -32,12 +32,12 @@ const renderCards = (pageNumber = 0) => {
         id: item.id,
         urlTicket: item.url,
       }));
-      console.log(events);
       notfound.innerText = '';
       cards.innerHTML = '';
       markupEvents(eventDetails);
       renderPagination(pageInfo);
       paginationBox.style.display = 'flex';
+      notfound.style.display = 'none';
       if (pageNumber !== 0) {
         setTimeout(() => {
           scrollPage();

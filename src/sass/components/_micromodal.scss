@@ -315,6 +315,14 @@
   &__info {
     max-height: 100px;
     overflow: auto;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $main-color;
+      border-radius: 10px;
+      height: 50px;
+    }
   }
   &__btn2 {
     display: inline-block;
